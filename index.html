@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-PROBLEMS</title>
+    <style>
+        h2,h3 {
+            text-align: center;
+        }
+        pre {
+            margin-left: 15%;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 65%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>--------------PROMPT OUTPUTS :----------------</h2>
+    <script src="./task.js">
+    </script>
+    <h2>Source code :</h2>
+    <pre>
+        <h3>Write a program to print reverse of a number by using while loop</h3>
+        var num = +prompt("Enter a number to reverse it : ")
+        //var num = 123;
+        var str = String(num);
+        var s = ""
+        var i = str.length - 1;
+        while (i >= 0) {
+            s += str[i] + " ";
+            i--;
+        };
+        document.write(`Reverse of input ( ${num} ) is ${s}`)
+        console.log(`Reverse of input ( ${num} ) is ${s}`);
+
+        <h3>method - 2 -- Using Methods</h3>
+
+        var num = prompt("Enter a number to reverse it : ")
+        //var num = "123";
+        var str = num.split("").reverse().join("");
+        document.write(`Reverse of input ( ${num} ) is ${str}`)
+        console.log(`Reverse of input ( ${num} ) is ${str}`);
+
+        <h3>Write a program to check whether input 2 is available in input1
+            input1: 108, input 2: 8   true
+            input 1: 535, input 2: 6  false
+        </h3>
+        let input1 = prompt("Enter the first input : ");
+        let input2 = prompt("Enter the second input : ");
+
+        if (input1.includes(input2)) {
+            console.log("True - input 1 is available in input 2");
+            document.write(`True - input 1 is available in input 2`);
+        } else {
+            console.log("False - input 2 is not available in input 1");
+            document.write(`False - input 2 is not available in input 1`);
+        };
+
+        <h3>Write a program to check whether a number is even or not by using switch statement</h3>
+        var num = +prompt("Enter a number :")
+        //var num = 1;
+        switch (num % 2) {
+            case true:
+                document.write(`The given input ${num} is even`)
+                console.log(`The given input ${num} is even`);
+                break;
+            default:
+                document.write(`The given input ${num} is odd`)
+                console.log(`The given input ${num} is odd`);
+                break;
+        };
+
+        <h3>method - 2</h3>
+        var num = +prompt("Enter a number to check even or odd :")
+        //var  num = 1;
+        switch (num % 2 == 0) {
+            case 0:
+                document.write(`The given input ( ${num} ) is even`)
+                console.log(`The given input ${num} is even`);
+                break;
+            default:
+                document.write(`The given input ( ${num} ) is odd`)
+                console.log(`The given input ${num} is odd`);
+                break;
+        };
+    </pre>
+</body>
+
+</html>
